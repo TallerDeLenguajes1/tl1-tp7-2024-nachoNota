@@ -12,3 +12,4 @@ C:\Users\Alumno\Documents\tl1-tp7-2024-nachoNota\obj\Debug\net8.0\refint\tl1-tp7
 C:\Users\Alumno\Documents\tl1-tp7-2024-nachoNota\obj\Debug\net8.0\tl1-tp7-2024-nachoNota.pdb
 C:\Users\Alumno\Documents\tl1-tp7-2024-nachoNota\obj\Debug\net8.0\tl1-tp7-2024-nachoNota.genruntimeconfig.cache
 C:\Users\Alumno\Documents\tl1-tp7-2024-nachoNota\obj\Debug\net8.0\ref\tl1-tp7-2024-nachoNota.dll
+C:\Users\Alumno\Documents\tl1-tp7-2024-nachoNota\obj\Debug\net8.0\tl1-tp7-2024-nachoNota.sourcelink.json
