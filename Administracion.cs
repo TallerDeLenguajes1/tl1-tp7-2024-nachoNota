@@ -1,12 +1,5 @@
 
-namespace AdministracionPersonal{
-    enum Cargos{
-        Auxiliar,
-        Administrativo,
-        Ingeniero,
-        Especialista, 
-        Investigador
-    }
+namespace AdministracionPersonal;
 
     public class Empleado{
         private string nombre;
@@ -17,8 +10,15 @@ namespace AdministracionPersonal{
         private double sueldoBasico;
         private Cargos cargo;
 
-   
-        public double Antiguedad(){
+    public global::System.String Nombre { get => nombre; set => nombre = value; }
+    public global::System.String Apellido { get => apellido; set => apellido = value; }
+    public DateTime FechaNac { get => fechaNac; set => fechaNac = value; }
+    public global::System.Char EstadoCivil { get => estadoCivil; set => estadoCivil = value; }
+    public DateTime FechaIngreso { get => fechaIngreso; set => fechaIngreso = value; }
+    public global::System.Double SueldoBasico { get => sueldoBasico; set => sueldoBasico = value; }
+    internal Cargos Cargo { get => cargo; set => cargo = value; }
+
+    public double Antiguedad(){
             DateTime hoy = DateTime.Now;
 
             double antiguedad = hoy.Year - FechaIngreso.Year;
@@ -26,17 +26,17 @@ namespace AdministracionPersonal{
             return antiguedad;
         }
 
-        public double Edad(){
+        public int Edad(){
             DateTime hoy = DateTime.Now;
 
-            double edad = hoy.Year - FechaNac.Year;
+            int edad = hoy.Year - FechaNac.Year;
 
             return edad;
         }
 
-        public double AniosParaJubilarse(){
+        public int AniosParaJubilarse(){
 
-            double jubil = 65 - Edad();
+            int jubil = 65 - Edad();
 
             return jubil;
         }
@@ -64,5 +64,18 @@ namespace AdministracionPersonal{
             return salario;
         }
 
+        public string MostrarCliente(){
+             return "Nombre: " + Nombre + " | " +
+                   "Apellido: " + Apellido + " | " +
+                   "Fecha de Nacimiento: " + FechaNac.ToShortDateString() + " | " +
+                   "Estado Civil: " + EstadoCivil + " | " +
+                   "Fecha de Ingreso: " + FechaIngreso.ToShortDateString() + " | " +
+                   "Sueldo Básico: " + SueldoBasico + " | " +
+                   "Cargo: " + Cargo + " | " +
+                   "Antigüedad: " + Antiguedad() + " años " + " | " +
+                   "Edad: " + Edad() + " años " + " | " +
+                   "Años para Jubilarse: " + AniosParaJubilarse() + " años" + " | " +
+                   "Salario Total: $" + SalarioTotal(this);
+            }
+
     }
-}
